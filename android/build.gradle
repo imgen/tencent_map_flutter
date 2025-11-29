@@ -2,14 +2,14 @@ group 'com.morbit.tencent_map_flutter'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '1.7.10'
+    ext.kotlin_version = '1.8.22'
     repositories {
         google()
         mavenCentral()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.3.0'
+        classpath 'com.android.tools.build:gradle:8.3.2'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
@@ -26,15 +26,19 @@ apply plugin: 'kotlin-android'
 
 android {
     namespace 'com.morbit.tencent_map_flutter'
-    compileSdkVersion 33
+    compileSdkVersion 36
+
+    buildFeatures {
+        buildConfig = false
+    }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '17'
     }
 
     sourceSets {
@@ -43,7 +47,8 @@ android {
     }
 
     defaultConfig {
-        minSdkVersion 26
+        minSdkVersion 28
+        consumerProguardFiles 'consumer-rules.pro'
     }
 
     lintOptions {

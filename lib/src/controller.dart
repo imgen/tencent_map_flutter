@@ -1,3 +1,4 @@
+// @dart=3.6
 part of '../tencent_map_flutter.dart';
 
 /// Controller for a single TencentMap instance running on the host platform.

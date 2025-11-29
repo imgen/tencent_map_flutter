@@ -1,3 +1,4 @@
+// @dart=3.6
 part of '../tencent_map_flutter.dart';
 
 /// Generic event used as a base class for all events that might be triggered from map.

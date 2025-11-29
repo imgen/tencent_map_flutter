@@ -1,3 +1,4 @@
+// @dart=3.6
 import "dart:async";
 
 import "package:flutter/foundation.dart";
